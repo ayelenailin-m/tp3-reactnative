@@ -1,0 +1,13 @@
+import { Tabs } from 'expo-router';
+
+export default function DashboardTabs() {
+    return (
+        <Tabs>
+        <Tabs.Screen name="inicio" options={{ title: 'Inicio' }} />
+        <Tabs.Screen name="perfil" options={{ title: 'Perfil' }} />
+        <Tabs.Screen name="ajustes" options={{ title: 'Ajustes' }} />
+        <Tabs.Screen name="contador" options={{ title: 'Contador' }} />
+        <Tabs.Screen name="productos" options={{ title: 'Productos' }} />
+        </Tabs>
+    );
+}

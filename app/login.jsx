@@ -1,30 +1,35 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Button, Text, TextInput, View } from 'react-native';
-import styles from '../app/(tabs)/styles';
+import styles from './styles';
 
 export default function Login() {
   const [usuario, setUsuario] = useState('');
   const [contrasena, setContrasena] = useState('');
   const router = useRouter();
 
+  const ingresar = () => {
+    // No validamos, vamos directo al dashboard
+    router.replace('/(tabs)/inicio');
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Iniciar Sesión</Text>
       <TextInput
+        style={styles.input}
         placeholder="Usuario"
         value={usuario}
         onChangeText={setUsuario}
-        style={styles.input}
       />
       <TextInput
+        style={styles.input}
         placeholder="Contraseña"
         secureTextEntry
         value={contrasena}
         onChangeText={setContrasena}
-        style={styles.input}
       />
-      <Button title="Ingresar" onPress={() => router.replace('/(tabs)')} />
+      <Button title="Ingresar" onPress={ingresar} />
     </View>
   );
 }

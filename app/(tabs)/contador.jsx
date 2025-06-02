@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button, Text, View } from 'react-native';
-import styles from '../(tabs)/styles';
+import styles from '../styles';
 
 export default function Contador() {
   const [contador, setContador] = useState(0);

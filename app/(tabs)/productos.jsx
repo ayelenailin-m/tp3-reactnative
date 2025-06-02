@@ -1,5 +1,5 @@
 import { FlatList, Text, View } from 'react-native';
-import styles from '../(tabs)/styles';
+import styles from '../styles';
 
 const productos = [
   { id: '1', nombre: 'Yerba', precio: 1200 },

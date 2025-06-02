@@ -2,9 +2,9 @@ import { FlatList, Text, View } from 'react-native';
 import styles from '../styles';
 
 const productos = [
-  { id: '1', nombre: 'Yerba', precio: 1200 },
-  { id: '2', nombre: 'Azúcar', precio: 850 },
-  { id: '3', nombre: 'Facturas', precio: 1500 },
+  { id: '1', nombre: 'Yerba', precio: 70 },
+  { id: '2', nombre: 'Azúcar', precio: 85 },
+  { id: '3', nombre: 'Pancito', precio: 90 },
 ];
 
 export default function Productos() {
@@ -14,8 +14,9 @@ export default function Productos() {
       <FlatList
         data={productos}
         keyExtractor={(item) => item.id}
+        contentContainerStyle={{ paddingBottom: 20 }}
         renderItem={({ item }) => (
-          <Text>{item.nombre} - ${item.precio}</Text>
+          <Text style={styles.listItem}>{item.nombre} - ${item.precio}</Text>
         )}
       />
     </View>

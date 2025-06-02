@@ -3,22 +3,23 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    justifyContent: 'center',
+    backgroundColor: '#f5f6f8',
     alignItems: 'center',
-    backgroundColor: '#f3f4f6',
+    justifyContent: 'flex-start',
+    paddingTop: 40,
+    paddingHorizontal: 20,
   },
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    marginBottom: 10,
-    textAlign: 'center',
+    marginBottom: 20,
     color: '#222',
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 16,
-    marginBottom: 20,
     color: '#666',
+    marginBottom: 20,
     textAlign: 'center',
   },
   input: {
@@ -41,7 +42,20 @@ export default StyleSheet.create({
     minWidth: 100,
   },
   listItem: {
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    marginBottom: 12,
+    width: '100%',
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 2,
+  },
+  listItemText: {
     fontSize: 16,
-    marginVertical: 4,
+    color: '#333',
   },
 });

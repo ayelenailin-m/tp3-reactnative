@@ -1,4 +1,4 @@
-import { Ionicons } from '@expo/vector-icons'; // ✅ importamos íconos
+import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 
 export default function TabsLayout() {
@@ -12,6 +12,9 @@ export default function TabsLayout() {
                 break;
             case 'perfil':
                 iconName = 'person-circle-outline';
+                break;
+            case 'tareas':
+                iconName = 'list-outline';
                 break;
             case 'ajustes':
                 iconName = 'settings-outline';
@@ -28,6 +31,7 @@ export default function TabsLayout() {
         })}>
         <Tabs.Screen name="inicio" options={{ title: 'Inicio' }} />
         <Tabs.Screen name="perfil" options={{ title: 'Perfil' }} />
+        <Tabs.Screen name="tareas" options={{ title: 'Tareas', headerShown: false }}/>
         <Tabs.Screen name="ajustes" options={{ title: 'Ajustes' }} />
         <Tabs.Screen name="contador" options={{ title: 'Contador' }} />
         <Tabs.Screen name="productos" options={{ title: 'Productos' }} />
